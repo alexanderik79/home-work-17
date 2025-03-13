@@ -38,6 +38,12 @@ $hoverColor: #D66926;
   box-sizing: border-box;
 }
 
+button:hover {
+    background-color: $hoverColor;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -91,7 +97,7 @@ header {
             transition: color 0.3s;
       
             &:hover {
-              color: #D66926;
+              color: $hoverColor;
             }
           }
         }
@@ -131,7 +137,6 @@ header {
 
             &:hover {
                 background-color: #D66926;
-                cursor: pointer;
               }
           }
         }
@@ -234,8 +239,7 @@ header {
             font-size: 18px;
 
             &:hover {
-                background-color: #D66926;
-                cursor: pointer;
+                background-color: $hoverColor;
               }
           }
     }  
@@ -295,22 +299,32 @@ header {
         display: flex;
         justify-content: center;
         background-color: rgb(45, 54, 81);
-        padding: 30px 310px 30px 310px;
-        gap: 19.5px;
+        padding: 30px 280px 30px 310px;
+        justify-content: space-between;
 
         input {
             background-color: rgb(58, 64, 81);
-            width: 420px;
+            width: 400px;
             height: 60px;
-            border: none;
-            border-bottom: 2px solid #ffffff ;
+            border: 2px solid transparent;
+            border-bottom: 2px solid #ffffff;
             padding: 10px;
             padding-left: 31px;
-
+            outline: none; 
+            margin-right: 19px;
+        
             &::placeholder {
                 color: #ffffff; 
             }
+        
+            &:focus {
+                border-color: #ffffff; 
+                transition: 0.5s;
+            }
         }
+        
+
+
         button {
             background-color: rgb(58, 64, 81);
             color: #ffffff;
@@ -318,10 +332,16 @@ header {
             height: 60px;
             border: none;
             border-bottom: 2px solid #ffffff ;
+            transform: translateY(-1px);
+            &:hover {
+                background-color: $hoverColor;
+            }
         }
       }
 
 
+
+    // -------------------------------------------- POST ------------------------------------- //
       .post-cntr {
         padding: 99px 310px 0px 310px;
 
@@ -330,6 +350,7 @@ header {
             font-family: $fontRobotoSlab;
             font-size: 40px;
             letter-spacing: 10;
+            margin-bottom: 52px;
         }
 
         .post-grid-cntr {
@@ -357,12 +378,14 @@ header {
                     font-family: $fontRoboto;
                     color: #637588;
                     font-size: 16px;
+                    text-align: center;
                 }
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 height: 250px;
+                padding: 10px;
             }
         }
         

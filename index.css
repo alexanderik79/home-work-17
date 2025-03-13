@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+button:hover {
+  background-color: #D66926;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -87,7 +93,6 @@ header::after {
   }
   .header-buttons button:hover {
     background-color: #D66926;
-    cursor: pointer;
   }
   .foto-grid {
     width: 1900px;
@@ -179,7 +184,6 @@ header::after {
   }
   .skill-button-contr button:hover {
     background-color: #D66926;
-    cursor: pointer;
   }
   .info-contr {
     background-color: #E5E5E5;
@@ -226,20 +230,26 @@ header::after {
     display: flex;
     justify-content: center;
     background-color: rgb(45, 54, 81);
-    padding: 30px 310px 30px 310px;
-    gap: 19.5px;
+    padding: 30px 280px 30px 310px;
+    justify-content: space-between;
   }
   .form-contr input {
     background-color: rgb(58, 64, 81);
-    width: 420px;
+    width: 400px;
     height: 60px;
-    border: none;
+    border: 2px solid transparent;
     border-bottom: 2px solid #ffffff;
     padding: 10px;
     padding-left: 31px;
+    outline: none;
+    margin-right: 19px;
   }
   .form-contr input::placeholder {
     color: #ffffff;
+  }
+  .form-contr input:focus {
+    border-color: #ffffff;
+    transition: 0.5s;
   }
   .form-contr button {
     background-color: rgb(58, 64, 81);
@@ -248,6 +258,10 @@ header::after {
     height: 60px;
     border: none;
     border-bottom: 2px solid #ffffff;
+    transform: translateY(-1px);
+  }
+  .form-contr button:hover {
+    background-color: #D66926;
   }
   .post-cntr {
     padding: 99px 310px 0px 310px;
@@ -257,6 +271,7 @@ header::after {
     font-family: "Roboto Slab", serif;
     font-size: 40px;
     letter-spacing: 10;
+    margin-bottom: 52px;
   }
   .post-cntr .post-grid-cntr {
     display: grid;
@@ -277,6 +292,7 @@ header::after {
     align-items: center;
     justify-content: center;
     height: 250px;
+    padding: 10px;
   }
   .post-cntr .post .txt h3 {
     font-family: "Roboto", sans-serif;
@@ -289,6 +305,7 @@ header::after {
     font-family: "Roboto", sans-serif;
     color: #637588;
     font-size: 16px;
+    text-align: center;
   }
   .post-cntr .post-1 {
     grid-column: span 2;

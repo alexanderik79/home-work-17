@@ -1,7 +1,9 @@
-$xl: 1920px;
+$xl: 2560px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
+
+
 
 $fontRoboto: "Roboto", sans-serif;
 $fontRobotoSlab: "Roboto Slab", serif;
@@ -67,50 +69,126 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+.checkbtn {
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+#check {
+  display: none;
+  &:checked ~ .checkbtn i {
+    transform: rotate(180deg);
+  }
+  &:checked ~ .nav-mobile-list {
+    display: block;
+  }
+}
+
+.fa-bars {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.nav-mobile-list {
+  display: none;
+  font-size: 26px;
+  color: white;
+
+}
+
+.ul-mobile {
+  position: absolute;
+  color: white; 
+  list-style: none; 
+
+
+  li {
+    color: white; 
+    margin-top: 30px;
+    transform: translateX(-80px);
+    text-align: right;
+
+    a {
+      color: white;
+      font-family: $fontRoboto;
+      text-decoration: none; 
+    }
+  }
+}
+
+
+
+
+// ======================================================== 1920
 @include xl {
-    .container-header {
-        width: 100%;
-        max-width: 1296px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-      
-        .logo {
-          width: 163px;
-          height: 60px;
-          margin: 20px;
-        }
-      
-        .nav {
-          display: flex;
-          gap: 20px;
-          list-style: none;
-          padding: 38px;
-          margin: 0;
-      
-          a {
-            text-decoration: none;
-            color: #ffffff;
-            font-family: $fontRoboto;
-            line-height: 20px;
-            letter-spacing: 1.8px;
-            transition: color 0.3s;
-      
-            &:hover {
-              color: $hoverColor;
-            }
-          }
-        }
+
+// ----------------------- HEADER ---------------------//
+
+.container-header {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    width: 163px;
+    height: 60px;
+    margin: 20px;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+
+  .nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 38px;
+    margin: 0;
+  
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-family: $fontRoboto;
+      line-height: 20px;
+      font-size: 18px;
+      letter-spacing: 1.8px;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: $hoverColor;
       }
+    }
+  }
+
+}
+
+     
       
       .container-h1 {
-          max-width: 1084px;
+          max-width: 100%;
+          height: 35vh;
           margin: auto;
           display: flex;
           justify-content: center;
+          align-items: end;
 
           h1{
-            margin-top: 347px;
             font-family: $fontRobotoSlab;
             color: white;
             font-size: 60px;
@@ -125,7 +203,7 @@ header {
           justify-content: center;
           gap: 20px;
 
-          button {
+          .head-btn {
             margin-top: 47px;
             width: 250px;
             height: 60px;
@@ -140,15 +218,16 @@ header {
               }
           }
         }
+// ----------------------- END OF HEADER ---------------------//
 
+// ------------------------- SKILLS --------------------------//
     .foto-grid {
-        width: 1900px;
+        width: calc(100% -  20px);
         margin: 10px;
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
         grid-template-rows: repeat(3, 1fr); 
         gap: 10px;
-
       }
       
       .item {
@@ -166,6 +245,7 @@ header {
         justify-content: center;
         align-items: center;
         position: relative;
+        background-size: cover;
         z-index: 1;
 
         &::after {
@@ -244,8 +324,17 @@ header {
           }
     }  
 
+    // ----------------------- END OF SKILLS ---------------------//
+    .info-sect {
+      background-color: #E5E5E5;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+
+    }
 
     .info-contr {
+        max-width: 1300px;
         background-color: #E5E5E5;
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -272,7 +361,7 @@ header {
 
         }
 
-        padding-left: 310px;
+        padding: 20px;
         color: #333;
         position: relative; 
       }
@@ -290,60 +379,97 @@ header {
       .lamp-block img {
         margin-top: 100px;
         margin-left: 50px;
-        width: 271px;
-        height: 487px;
+        max-width: 271px;
+        max-height: 487px;
       }
 
 
-      .form-contr {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(45, 54, 81);
-        padding: 30px 280px 30px 310px;
-        justify-content: space-between;
-
-        input {
-            background-color: rgb(58, 64, 81);
-            width: 400px;
-            height: 60px;
-            border: 2px solid transparent;
-            border-bottom: 2px solid #ffffff;
-            padding: 10px;
-            padding-left: 31px;
-            outline: none; 
-            margin-right: 19px;
-        
-            &::placeholder {
-                color: #ffffff; 
-            }
-        
-            &:focus {
-                border-color: #ffffff; 
-                transition: 0.5s;
-            }
-        }
-        
+      // ------------------------------- FORM ------------------------------//
 
 
-        button {
-            background-color: rgb(58, 64, 81);
-            color: #ffffff;
-            width: 420px;
-            height: 60px;
-            border: none;
-            border-bottom: 2px solid #ffffff ;
-            transform: translateY(-1px);
-            &:hover {
-                background-color: $hoverColor;
-            }
-        }
-      }
+.form-contr form {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+}
+
+.form-contr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 54, 81);
 
 
+
+  input {
+    background-color: rgb(58, 64, 81);
+    color: white;
+    width: 100%;
+
+    height: 60px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px;
+    padding-left: 31px;
+    outline: none; 
+
+
+    &::placeholder {
+      color: #ffffff; 
+    }
+
+    &:focus {
+      border-color: #ffffff; 
+      transition: 0.5s;
+    }
+  }
+  
+  button {
+    background-color: rgb(58, 64, 81);
+    color: #ffffff;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-bottom: 2px solid #ffffff ;
+    transform: translateY(-1px);
+    &:hover {
+        background-color: $hoverColor;
+    }
+  }
+}
+
+
+
+    .form-contr form {
+      grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .form-contr input:first-of-type {
+        grid-column: 1 / 2; 
+    }
+
+    .form-contr input:nth-of-type(2) {
+        grid-column: 2 / 3;
+    }
+
+    .form-contr button {
+        grid-column: 3 / 4;
+    }
 
     // -------------------------------------------- POST ------------------------------------- //
+
+      .post-sect {
+        display: flex;
+        justify-content: center;
+
+      }
       .post-cntr {
-        padding: 99px 310px 0px 310px;
+        padding: 99px 20px 0px 20px;
+
+        width: 100vw;
+        max-width: 1300px;
 
         h2 {
             color: #2D3651;
@@ -364,6 +490,7 @@ header {
             background-color: #EEEEEE;
             height: 550px; 
             .img{
+                background-size: cover;
                 height: 300px;
             }
             .txt {
@@ -457,34 +584,274 @@ header {
                 background-color: #ffffff;
               }
         }
+      }
+}
 
+
+// ========================================================= 992
+@include lg {
+
+// --------------------- HEADER ------------------//
+    header {
+        height: 100vh;
+    }
+
+    .container-h1{
+        height: 40vh;
+
+    }
+
+    h1{
+        margin-top: 240px !important;
+        font-size: 40px !important;
+      }
+
+    .head-btn {
+        width: 200px !important;
+        height: 50px !important;
+    }
+
+// --------------------------- SKILLS --------------------//
+    .foto-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(5, 1fr); 
+      }
+
+    .item-4 {
+        grid-column: span 2;   
+    }
+    .item-7 {
+        grid-row: span 2;   
+    }
+    .item-9 {
+        grid-column: span 2; 
+    }
+
+// ----------------------------- INFO --------------------//
+    .about-block {
+        padding-left: 20px;
+    }
+
+    .lamp-block img {
+        margin-top: 87px;
+        // margin-left: 50px;
+        max-width: 255px;
+        max-height: 459px;
+      }
+
+// ----------------------------- FORM --------------------//
+      .form-contr {
+        width: 100vw !important;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(45, 54, 81);
+        padding: 0px 10px 10px 10px;
+        justify-content: center !important;
+
+          button {
+            width: 30vw;
+          }
+          input {
+            width: 30vw;
+          }
+      }
+
+// -------------------------- POSTS -------------------- //
+
+      .post-grid-cntr > * {
+        grid-row: auto !important;
+        grid-column: auto !important;
+      }
+
+      .post-cntr {
+        padding: 20px 20px 20px 20px;
+
+
+        .post {
+          background-color: #EEEEEE;
+          height: 550px; 
+          .img{
+              background-size: cover;
+              height: 300px;
+          }
+          .txt {
+              h3 {
+                  font-family: $fontRoboto;
+                  color: #637588;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-bottom: 15px;
+              }
+              p {
+                  font-family: $fontRoboto;
+                  color: #637588;
+                  font-size: 16px;
+                  text-align: center;
+              }
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: 250px;
+              padding: 10px;
+          }
+      }
+      
+      .post-1 {
+        grid-column: span 2 !important; 
+      }
+      .post-4 {
+        grid-column: span 2 !important; 
+      }
+      .post-5 {
+        grid-column: span 2 !important; 
+      }
 
       }
 
-      
+      .post-grid-cntr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        grid-template-rows: repeat(3, 1fr) !important; 
+        gap: 20px; 
+      }
 }
 
-@include lg {
-  .container-header {
-    max-width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
+
+
+
+// ============================================================= 768
 @include md {
-  .container-header {
-    max-width: 100%;
-    flex-direction: column;
+  
+// -------------------------- HEADER -------------------------//
+  header {
+      height: 100vh;
+      .nav {
+          display: none !important;
+      }
+      .nav-mobile {
+        display: block !important;
+        margin: 30px;
+      }
   }
 
-  .nav {
-    flex-direction: column;
-    align-items: center;
+  .container-h1{
+      height: 40vh;
+
   }
+
+  h1{
+      margin-top: 140px !important;
+      font-size: 30px !important;
+    }
+
+  .head-btn {
+      width: 170px !important;
+      height: 40px !important;
+  }
+
+
+// ----------------------------- FORM ------------------------------//
+  .form-contr form {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-contr input:first-of-type {
+    width: 100%;
+    grid-column: 1 / -1 !important; 
+  }
+
+  .form-contr input:nth-of-type(2),
+  .form-contr button {
+    width: 100%;
+    grid-column: span 1 !important; 
+  }
+
+  .form-contr input:nth-of-type(2) {
+    justify-self: start !important; 
+  }
+
+  .form-contr button {
+    justify-self: end !important; 
+    transform: translateY(0.5px);
+  }
+
+  .form-contr form {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+
+
+// --------------------------- SKILLS --------------------//
+  .foto-grid > * {
+      grid-row: auto !important;
+      grid-column: auto !important;
+  }
+
+  .foto-grid {
+      grid-template-columns: repeat(2, 1fr) !important; 
+      grid-template-rows: repeat(6, 1fr) !important; 
+  }
+
+  .item-2 {
+      grid-row: span 2 !important;   
+  }
+  .item-4 {
+      grid-column: span 2 !important;   
+  }
+  .item-5 {
+      grid-row: span 2 !important;   
+  }
+
+
+// ----------------------------- INFO --------------------//
+  .about-block {
+      padding-left: 20px;
+      h2 {
+          margin-top: 100px;
+          font-size: 24px;
+      }
+      p {
+          font-weight: normal;
+          font-size: 16px;
+      }
+  }
+
+  .lamp-block img {
+      margin-top: -150px !important;
+      max-width: 235px;
+      max-height: 435px;
+  }
+
+
+// -------------------------- POSTS -------------------- //
+  #post-grid-cntr > * {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  #post-grid-cntr {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 20px; 
+  }
+
+
 }
 
+
+
+
+
+// ======================================================= 576
 @include sm {
+  header {
+    height: 100vh;
+  }
   .container-header {
     max-width: 100%;
   }
@@ -494,4 +861,100 @@ header {
     align-items: center;
     padding: 20px;
   }
+  .nav-mobile {
+    display: block !important;
+    margin: 30px;
+  }
+
+  .header-buttons {
+    gap: 8px;
+  }
+  .head-btn {
+    width: 170px;
+    height: 40px;
+  }
+
+  .container-h1 {
+    padding-top: 40vh;
+  }
+  h1 {
+    text-align: center;
+  }
+
+
+// ----------------------------- SKILLS --------------------------- //
+.foto-grid > * {
+  grid-row: auto !important;
+  grid-column: auto !important;
+}
+
+.foto-grid {
+  grid-template-columns: repeat(1, 1fr) !important; 
+  grid-template-rows: repeat(9, 1fr) !important; 
+}
+
+// ----------------------------- INFO ---------------------------- //
+
+
+.info-contr {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.lamp-block img {
+  margin: auto !important;
+  max-width: 271px;
+  max-height: 487px;
+}
+
+
+
+// ----------------------------- FORM ------------------------------//
+  .form-contr form {
+      grid-template-columns: 1fr !important; 
+  }
+
+  .form-contr input:first-of-type {
+      grid-column: 1 / -1; 
+  }
+
+  .form-contr input:nth-of-type(2),
+  .form-contr button {
+      grid-column: span 1;
+  }
+
+  .form-contr input:nth-of-type(2) {
+      justify-self: start;
+  }
+
+  .form-contr button {
+      justify-self: end;
+  }
+
+  .form-contr form {
+      grid-template-columns: 1fr 1fr;
+  }
+
+
+
+  // -------------------------- POSTS -------------------- //
+
+  .post-sect {
+    display: flex;
+    justify-content: center;
+  }
+
+  #post-grid-cntr > * {
+    grid-row: auto !important;
+    grid-column: auto !important;
+  }
+
+  #post-grid-cntr {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important; 
+    grid-template-rows: repeat(6, 1fr) !important; 
+    gap: 20px; 
+  }
+
 }

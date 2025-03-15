@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="index.css">
 </head>
@@ -22,8 +23,21 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contacts</a></li>
-                </ul>         
+                </ul>   
             </nav>  
+            <div class="nav-mobile">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="nav-mobile-list">
+                    <ul class="ul-mobile">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>      
         </div>
         <div class="container-h1">
             <h1>
@@ -31,8 +45,8 @@
             </h1>
         </div>
         <div class="header-buttons">
-            <button>Learn more</button>
-            <button>Get started</button>
+            <button class="head-btn">Learn more</button>
+            <button class="head-btn">Get started</button>
         </div>
     </header>
     <!------------------------------- END OF HEADER ------------------------------------->
@@ -56,6 +70,7 @@
     <!------------------------------------ END OF SKILLS ----------------------------------->
 
     <!------------------------------------------ INFO -------------------------------------->
+    <section class="info-sect">
       <div class="info-contr">
         <div class="about-block">
             <h2>Are You Ready?<br>
@@ -69,9 +84,11 @@
             <img src="./images/img-lamp-webdev.png" alt="">
         </div>
       </div>
+    </section>
     <!------------------------------------ END OF INFO ------------------------------------->
 
     <!-------------------------------------- SUBSCRIBE ------------------------------------->
+    <div class="form-sect">
       <div class="form-contr">
         <form action="POST">
             <input type="text" placeholder="Your name..." required>
@@ -79,58 +96,62 @@
             <button type="submit" >Subscribe</button>
         </form>
       </div>
+    </div>
     <!--------------------------------- END OF SUBSCRIBE ----------------------------------->
 
     <!----------------------------------------- POST --------------------------------------->
-      <div class="post-cntr">
-        <h2>
-            Some section of posts
-        </h2>
-        <div class="post-grid-cntr">
-            <div class="post post-1">
-                <div class="img"></div>
-                <div class="txt">
-                    <h3>Nostrum quod fugiat odio perspiciatis</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+
+      <section class="post-sect">
+        <div class="post-cntr">
+            <h2>
+                Some section of posts
+            </h2>
+            <div class="post-grid-cntr" id="post-grid-cntr">
+                <div class="post post-1">
+                    <div class="img"></div>
+                    <div class="txt">
+                        <h3>Nostrum quod fugiat odio perspiciatis</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
-            </div>
-            <div class="post post-2">
-                <div class="img"></div>
-                <div class="txt">
-                    <h3>Lorem ipsum dolor amet</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                <div class="post post-2">
+                    <div class="img"></div>
+                    <div class="txt">
+                        <h3>Lorem ipsum dolor amet</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
-            </div>
-            <div class="post post-3">
-                <div class="img"></div>
-                <div class="txt">
-                    <h3>Eum quibusdam voluptas explicabo, commodi</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                <div class="post post-3">
+                    <div class="img"></div>
+                    <div class="txt">
+                        <h3>Eum quibusdam voluptas explicabo, commodi</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
-            </div>
-            <div class="post post-4">
-                <div class="img"></div>
-                <div class="txt">
-                    <h3>Voluptate fuga earum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                <div class="post post-4">
+                    <div class="img"></div>
+                    <div class="txt">
+                        <h3>Voluptate fuga earum</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
-            </div>
-            <div class="post post-5">
-                <div class="img"></div>                
-                <div class="txt">
-                    <h3>Facere rerum aliquam nostrum vel</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                <div class="post post-5">
+                    <div class="img"></div>                
+                    <div class="txt">
+                        <h3>Facere rerum aliquam nostrum vel</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
-            </div>
-            <div class="post post-6">
-                <div class="img"></div>                
-                <div class="txt">
-                    <h3>Ratione reprehenderit necessitatibus, labore vel</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                <div class="post post-6">
+                    <div class="img"></div>                
+                    <div class="txt">
+                        <h3>Ratione reprehenderit necessitatibus, labore vel</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt, voluptatibus repellendus facere illum rem, neque unde alias non impedit laborum consequatur </p>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
+    </section>
 
       <div class="skill-button-contr">
         <button>View all posts...</button>

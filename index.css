@@ -14,7 +14,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("../images/img-header.jpg");
+  background-image: url("./images/img-header.jpg");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -627,13 +627,15 @@ header::after {
     max-width: 235px;
     max-height: 435px;
   }
+  .post-sect {
+    display: flex;
+    justify-content: center;
+  }
   #post-grid-cntr > * {
     grid-row: auto;
     grid-column: auto;
   }
   #post-grid-cntr {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);

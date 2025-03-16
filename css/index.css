@@ -311,12 +311,12 @@ header::after {
   background-image: url("../images/img-seo.jpg");
 }
 
-.skill-button-contr {
+.button-contr {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skill-button-contr button {
+.button-contr button {
   margin: 20px 0px 40px 0px;
   width: 350px;
   height: 60px;
@@ -326,8 +326,9 @@ header::after {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
-.skill-button-contr button:hover {
+.button-contr button:hover {
   background-color: #D66926;
+  border: 2px solid #2d3651;
 }
 
 @media (max-width: 992px) {
@@ -373,12 +374,19 @@ header::after {
     grid-template-columns: repeat(1, 1fr) !important;
     grid-template-rows: repeat(9, 1fr) !important;
   }
+  .button-contr {
+    padding: 10px;
+  }
+  .button-contr button {
+    width: 100%;
+  }
 }
 .info-sect {
   background-color: #E5E5E5;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: start;
 }
 
 .info-contr {
@@ -387,7 +395,7 @@ header::after {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
-  align-items: center;
+  align-items: start;
   padding-bottom: 87px;
 }
 
@@ -419,9 +427,13 @@ header::after {
   background-color: #707070;
 }
 
-.lamp-block img {
+.lamp-block {
+  display: flexbox;
+  justify-content: start;
   margin-top: 100px;
   margin-left: 50px;
+}
+.lamp-block img {
   max-width: 271px;
   max-height: 487px;
 }
@@ -430,8 +442,13 @@ header::after {
   .about-block {
     padding-left: 20px;
   }
+  .lamp-block {
+    display: flexbox;
+    justify-content: start;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
   .lamp-block img {
-    margin-top: 87px;
     max-width: 255px;
     max-height: 459px;
   }
@@ -464,9 +481,11 @@ header::after {
     height: 200px;
     background-color: #707070;
   }
-  .lamp-block img {
-    margin-top: -30px !important;
+  .lamp-block {
+    margin-top: 100px;
     margin-left: 0px;
+  }
+  .lamp-block img {
     max-width: 235px;
     max-height: 435px;
   }
@@ -491,8 +510,14 @@ header::after {
     font-weight: normal;
     font-size: 16px;
   }
+  .lamp-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   .lamp-block img {
-    margin: auto !important;
     max-width: 271px;
     max-height: 487px;
   }
@@ -629,14 +654,14 @@ header::after {
 }
 
 .post-cntr {
-  padding: 99px 20px 0px 20px;
+  padding: 0px 20px 0px 20px;
   width: 100vw;
   max-width: 1300px;
 }
 .post-cntr h2 {
   color: #2d3651;
   font-family: "Roboto Slab", serif;
-  font-size: 40px;
+  font-size: 24px;
   letter-spacing: 10;
   margin-bottom: 52px;
 }
@@ -761,7 +786,7 @@ header::after {
   }
 }
 footer {
-  margin-top: 60px;
+  margin-top: 40px;
   background-color: #2d3651;
   display: flex;
   align-items: center;

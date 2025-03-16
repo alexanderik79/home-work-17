@@ -78,7 +78,7 @@
     background-image: url("../images/img-seo.jpg");
   }
   
-  .skill-button-contr {
+  .button-contr {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,6 +95,7 @@
   
       &:hover {
         background-color: $hoverColor;
+        border: 2px solid $deepBlueColor;
       }
     }
   }
@@ -150,5 +151,12 @@
     .foto-grid {
       grid-template-columns: repeat(1, 1fr) !important;
       grid-template-rows: repeat(9, 1fr) !important;
+    }
+
+    .button-contr {
+       padding: 10px;
+        button {
+        width: 100%;
+      }
     }
   }

@@ -51,7 +51,7 @@ header::after {
   display: none;
 }
 #check:checked ~ .checkbtn i {
-  transform: rotate(180deg);
+  transform: rotate(540deg);
 }
 #check:checked ~ .nav-mobile-list {
   display: block;
@@ -83,6 +83,9 @@ header::after {
 .ul-mobile li a {
   color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 3px;
   text-decoration: none;
 }
 

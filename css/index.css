@@ -264,7 +264,7 @@ header::after {
   cursor: pointer;
 }
 .item:hover::after {
-  background-color: rgba(117, 141, 219, 0.9);
+  background-color: rgba(45, 54, 81, 0.9);
 }
 
 .item-1 {
@@ -401,14 +401,14 @@ header::after {
   margin-top: 50px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 2;
 }
-.about-block::after {
+.about-block p::after {
   content: "";
   position: absolute;
-  top: 260px;
-  right: -50px;
+  top: 280px;
+  right: -20px;
   width: 1px;
   height: 200px;
   background-color: #707070;
@@ -430,6 +430,13 @@ header::after {
     max-width: 255px;
     max-height: 459px;
   }
+  p {
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 2;
+  }
 }
 @media (max-width: 768px) {
   .about-block {
@@ -443,8 +450,18 @@ header::after {
     font-weight: normal;
     font-size: 16px;
   }
+  .about-block p::after {
+    content: "";
+    position: absolute;
+    top: 240px;
+    right: 0px;
+    width: 1px;
+    height: 200px;
+    background-color: #707070;
+  }
   .lamp-block img {
-    margin-top: -150px !important;
+    margin-top: -30px !important;
+    margin-left: 0px;
     max-width: 235px;
     max-height: 435px;
   }
@@ -453,6 +470,21 @@ header::after {
   .info-contr {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+  .about-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h2 {
+    margin: 57px 0 19px 0 !important;
+    text-align: center;
+  }
+  p {
+    margin-top: 0 !important;
+    font-weight: normal;
+    font-size: 16px;
   }
   .lamp-block img {
     margin: auto !important;
@@ -484,6 +516,8 @@ header::after {
   padding: 10px;
   padding-left: 31px;
   outline: none;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 .form-contr input::placeholder {
   color: #ffffff;
@@ -495,6 +529,8 @@ header::after {
 .form-contr button {
   background-color: rgb(58, 64, 81);
   color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 2px;
   width: 100%;
   height: 60px;
   border: none;

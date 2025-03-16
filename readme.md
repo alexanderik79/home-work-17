@@ -15,19 +15,32 @@ This is a responsive web project built with HTML and SCSS. It features a modern 
 ## Project Structure
 
 project-root/
+
 ├── css/
+
 │   └── style.css         # Compiled CSS file
+
 ├── scss/
 │   ├── style.scss        # Main SCSS file that imports all modules
+
 │   ├── _base.scss       # Variables, mixins, and global styles
+
 │   ├── _header.scss     # Styles for the header section
+
 │   ├── _skills.scss     # Styles for the skills section
+
 │   ├── _info.scss       # Styles for the info section
+
 │   ├── _form.scss       # Styles for the contact form
+
 │   ├── _posts.scss      # Styles for the posts section
+
 │   └── _footer.scss     # Styles for the footer
+
 ├── images/              # Folder for images used in the project
+
 ├── index.html           # Main HTML file
+
 └── README.md            # This file
 
 

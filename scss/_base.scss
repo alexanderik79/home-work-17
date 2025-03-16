@@ -12,6 +12,15 @@ $fontRobotoSlab: "Roboto Slab", serif;
 $hoverColor: #D66926;
 $deepBlueColor: #2d3651;
 $greyFontColor: #637588;
+$greyColor: #707070;
+$whiteColor: #fff;
+$tone: rgb(45, 54, 81, 0.9);
+
+// ====================== FONT WEIGHT ==================== // 
+$normalweight: normal;
+$boldWeight: bold;
+$thinWeight: 100;
+$lightWeight: 200;
 
 // ====================== MIXINES ======================== //
 @mixin xl {

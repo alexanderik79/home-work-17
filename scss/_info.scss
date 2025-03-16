@@ -21,14 +21,14 @@
       margin-top: 100px;
       font-family: $fontRobotoSlab;
       font-size: 40px;
-      font-weight: bold;
+      font-weight:  $boldWeight;
     }
   
     p {
       margin-top: 50px;
       font-family: $fontRoboto;
       font-size: 18px;
-      font-weight: normal;
+      font-weight: $normalweight;
       line-height: 2;
       &::after {
         content: "";
@@ -37,7 +37,7 @@
         right: -20px;
         width: 1px;
         height: 200px;
-        background-color: #707070;
+        background-color: $greyColor;
       }
     }
   
@@ -78,7 +78,7 @@
       margin-top: 50px;
       font-family: $fontRoboto;
       font-size: 18px;
-      font-weight: normal;
+      font-weight: $normalweight;
       line-height: 2;
     }
   }
@@ -92,7 +92,7 @@
         font-size: 24px;
       }
       p {
-        font-weight: normal;
+        font-weight: $normalweight;
         font-size: 16px;
         &::after {
           content: "";
@@ -101,7 +101,7 @@
           right: 0px;
           width: 1px;
           height: 200px;
-          background-color: #707070;
+          background-color: $greyColor;
         }
       }
     }
@@ -137,7 +137,7 @@
 
     p {
       margin-top: 0 !important;
-      font-weight: normal;
+      font-weight: $normalweight;
       font-size: 16px;
     }
   

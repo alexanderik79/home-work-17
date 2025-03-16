@@ -14,7 +14,7 @@
     text-align: center;
     font-family: $fontRoboto;
     font-size: 20px;
-    color: #ffffff;
+    color: $whiteColor;
     letter-spacing: 4px;
     padding: 20px;
     border: 1px solid #999;
@@ -42,7 +42,7 @@
       cursor: pointer;
   
       &::after {
-        background-color: rgba(45, 54, 81, 0.9);
+        background-color: $tone;
       }
     }
   }
@@ -88,8 +88,8 @@
       width: 350px;
       height: 60px;
       background-color: $deepBlueColor;
-      border: 2px solid #fff;
-      color: #fff;
+      border: 2px solid $whiteColor;
+      color: $whiteColor;
       font-family: $fontRoboto;
       font-size: 18px;
   

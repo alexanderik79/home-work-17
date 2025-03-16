@@ -14,11 +14,11 @@
   
     input {
       background-color: rgb(58, 64, 81);
-      color: white;
+      color: $whiteColor;
       width: 100%;
       height: 60px;
       border: 2px solid transparent;
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid $whiteColor;
       padding: 10px;
       padding-left: 31px;
       outline: none;
@@ -26,24 +26,27 @@
       letter-spacing: 2px;
   
       &::placeholder {
-        color: #ffffff;
+        color: $whiteColor;
       }
-  
+      &:hover {
+        border-color: $whiteColor;
+        transition: 0.5s;
+      }
       &:focus {
-        border-color: #ffffff;
+        border-color: $whiteColor;
         transition: 0.5s;
       }
     }
   
     button {
       background-color: rgb(58, 64, 81);
-      color: #ffffff;
+      color: $whiteColor;
       font-size: 18px;
       letter-spacing: 2px;
       width: 100%;
       height: 60px;
       border: none;
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid $whiteColor;
       transform: translateY(-1px);
       &:hover {
         background-color: $hoverColor;

@@ -657,6 +657,7 @@ header::after {
   height: 300px;
 }
 .post .txt {
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -670,12 +671,14 @@ header::after {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
+  text-align: center;
 }
 .post .txt p {
   font-family: "Roboto", sans-serif;
   color: #637588;
   font-size: 16px;
   text-align: center;
+  line-height: 20px;
 }
 
 .post-1 {

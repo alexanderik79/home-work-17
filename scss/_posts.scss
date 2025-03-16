@@ -140,9 +140,17 @@
   
   // ============ 576px ============
   @include sm {
-    .post-sect {
+    section .post-sect {
       display: flex;
       justify-content: center;
+      
+    }
+
+    .post-cntr {
+      margin-top: 0;
+      h2 {
+        margin-top: 0;
+      }
     }
   
     .post-sect .post-cntr #post-grid-cntr {

@@ -771,9 +771,15 @@ header::after {
   }
 }
 @media (max-width: 576px) {
-  .post-sect {
+  section .post-sect {
     display: flex;
     justify-content: center;
+  }
+  .post-cntr {
+    margin-top: 0;
+  }
+  .post-cntr h2 {
+    margin-top: 0;
   }
   .post-sect .post-cntr #post-grid-cntr {
     display: grid;

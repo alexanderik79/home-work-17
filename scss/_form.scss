@@ -1,0 +1,142 @@
+.form-contr form {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+  }
+  
+  .form-contr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $deepBlueColor;
+  
+    input {
+      background-color: rgb(58, 64, 81);
+      color: white;
+      width: 100%;
+      height: 60px;
+      border: 2px solid transparent;
+      border-bottom: 2px solid #ffffff;
+      padding: 10px;
+      padding-left: 31px;
+      outline: none;
+  
+      &::placeholder {
+        color: #ffffff;
+      }
+  
+      &:focus {
+        border-color: #ffffff;
+        transition: 0.5s;
+      }
+    }
+  
+    button {
+      background-color: rgb(58, 64, 81);
+      color: #ffffff;
+      width: 100%;
+      height: 60px;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      transform: translateY(-1px);
+      &:hover {
+        background-color: $hoverColor;
+      }
+    }
+  }
+  
+  .form-contr form {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .form-contr input:first-of-type {
+    grid-column: 1 / 2;
+  }
+  
+  .form-contr input:nth-of-type(2) {
+    grid-column: 2 / 3;
+  }
+  
+  .form-contr button {
+    grid-column: 3 / 4;
+  }
+  
+  // ============ 992px ============
+  @include lg {
+    .form-contr {
+      width: 100vw !important;
+      display: flex;
+      justify-content: center;
+      background-color: $deepBlueColor;
+      padding: 0px 10px 10px 10px;
+      justify-content: center !important;
+  
+      button {
+        width: 30vw;
+      }
+      input {
+        width: 30vw;
+      }
+    }
+  }
+  
+  // ============ 768px ============
+  @include md {
+    .form-contr form {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .form-contr input:first-of-type {
+      width: 100%;
+      grid-column: 1 / -1 !important;
+    }
+  
+    .form-contr input:nth-of-type(2),
+    .form-contr button {
+      width: 100%;
+      grid-column: span 1 !important;
+    }
+  
+    .form-contr input:nth-of-type(2) {
+      justify-self: start !important;
+    }
+  
+    .form-contr button {
+      justify-self: end !important;
+      transform: translateY(0.5px);
+    }
+  
+    .form-contr form {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+  
+  // ============ 576px ============
+  @include sm {
+    .form-contr form {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .form-contr input:first-of-type {
+      grid-column: 1 / -1;
+    }
+  
+    .form-contr input:nth-of-type(2),
+    .form-contr button {
+      grid-column: span 1;
+    }
+  
+    .form-contr input:nth-of-type(2) {
+      justify-self: start;
+    }
+  
+    .form-contr button {
+      justify-self: end;
+    }
+  
+    .form-contr form {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

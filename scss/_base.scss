@@ -1,0 +1,59 @@
+// ====================== MEDIA VARS ==================== //
+$xl: 2560px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+// ====================== FONTS VARS ==================== // 
+$fontRoboto: "Roboto", sans-serif;
+$fontRobotoSlab: "Roboto Slab", serif;
+
+// ====================== COLORS VARS ==================== // 
+$hoverColor: #D66926;
+$deepBlueColor: #2d3651;
+$greyFontColor: #637588;
+
+// ====================== MIXINES ======================== //
+@mixin xl {
+  @media (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+// ====================== GLOBAL STYLES ==================== //
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+button:hover {
+  background-color: $hoverColor;
+  transition: 0.3s;
+  cursor: pointer;
+}

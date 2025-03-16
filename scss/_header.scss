@@ -1,0 +1,228 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/img-header.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(117, 141, 219, 0.5);
+      z-index: -1;
+    }
+  }
+  
+  .checkbtn {
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  
+  #check {
+    display: none;
+    &:checked ~ .checkbtn i {
+      transform: rotate(180deg);
+    }
+    &:checked ~ .nav-mobile-list {
+      display: block;
+    }
+  }
+  
+  .fa-bars {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    color: white;
+  }
+  
+  .nav-mobile-list {
+    display: none;
+    font-size: 26px;
+    color: white;
+  }
+  
+  .ul-mobile {
+    position: absolute;
+    color: white;
+    list-style: none;
+  
+    li {
+      color: white;
+      margin-top: 30px;
+      transform: translateX(-80px);
+      text-align: right;
+  
+      a {
+        color: white;
+        font-family: $fontRoboto;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  // ============ 1920px ============
+  @include xl {
+    .container-header {
+      width: 100%;
+      max-width: 1296px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+  
+      .logo {
+        width: 163px;
+        height: 60px;
+        margin: 20px;
+      }
+  
+      .nav-mobile {
+        display: none;
+      }
+  
+      .nav {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 38px;
+        margin: 0;
+  
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          font-family: $fontRoboto;
+          line-height: 20px;
+          font-size: 18px;
+          letter-spacing: 1.8px;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: $hoverColor;
+          }
+        }
+      }
+    }
+  
+    .container-h1 {
+      max-width: 100%;
+      height: 35vh;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+  
+      h1 {
+        font-family: $fontRobotoSlab;
+        color: white;
+        font-size: 60px;
+        font-weight: 200;
+      }
+    }
+  
+    .header-buttons {
+      max-width: 1084px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  
+      .head-btn {
+        margin-top: 47px;
+        width: 250px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        font-family: $fontRoboto;
+        font-size: 18px;
+  
+        &:hover {
+          background-color: $hoverColor;
+        }
+      }
+    }
+  }
+  
+  // ============ 992px ============
+  @include lg {
+    header {
+      height: 100vh;
+    }
+  
+    .container-h1 {
+      height: 40vh;
+      h1 {
+        margin-top: 240px !important;
+        font-size: 40px !important;
+      }
+    }
+  
+    .head-btn {
+      width: 200px !important;
+      height: 50px !important;
+    }
+  }
+  
+  // ============ 768px ============
+  @include md {
+    header {
+      height: 100vh;
+      .nav {
+        display: none !important;
+      }
+      .nav-mobile {
+        display: block !important;
+        margin: 30px;
+      }
+    }
+  
+    .container-h1 {
+      height: 40vh;
+      h1 {
+        margin-top: 140px !important;
+        font-size: 30px !important;
+      }
+    }
+  
+    .head-btn {
+      width: 170px !important;
+      height: 40px !important;
+    }
+  }
+  
+  // ============ 576px ============
+  @include sm {
+    header {
+      height: 100vh;
+    }
+    .container-header {
+      max-width: 100%;
+    }
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .nav-mobile {
+      display: block !important;
+      margin: 30px;
+    }
+    .header-buttons {
+      gap: 8px;
+    }
+    .head-btn {
+      width: 170px;
+      height: 40px;
+    }
+    .container-h1 {
+      padding-top: 40vh;
+      h1 {
+        text-align: center;
+      }
+    }
+  }

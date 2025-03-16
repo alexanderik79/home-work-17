@@ -1,0 +1,155 @@
+.post-sect {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .post-cntr {
+    padding: 99px 20px 0px 20px;
+    width: 100vw;
+    max-width: 1300px;
+  
+    h2 {
+      color: $deepBlueColor;
+      font-family: $fontRobotoSlab;
+      font-size: 40px;
+      letter-spacing: 10;
+      margin-bottom: 52px;
+    }
+  }
+  
+  .post-cntr #post-grid-cntr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .post {
+    background-color: #EEEEEE;
+    height: 550px;
+  
+    .img {
+      background-size: cover;
+      height: 300px;
+    }
+  
+    .txt {
+      h3 {
+        font-family: $fontRoboto;
+        color: $greyFontColor;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      p {
+        font-family: $fontRoboto;
+        color: $greyFontColor;
+        font-size: 16px;
+        text-align: center;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 250px;
+      padding: 10px;
+    }
+  }
+  
+  .post-1 {
+    grid-column: span 2;
+    .img {
+      background-image: url("../images/img-post-1.jpg");
+    }
+  }
+  
+  .post-2 {
+    .img {
+      background-image: url("../images/img-post-2.jpg");
+    }
+  }
+  
+  .post-3 {
+    .img {
+      background-image: url("../images/img-post-3.jpg");
+    }
+  }
+  
+  .post-4 {
+    .img {
+      background-image: url("../images/img-post-4.jpg");
+    }
+  }
+  
+  .post-5 {
+    .img {
+      background-image: url("../images/img-post-5.jpg");
+    }
+  }
+  
+  .post-6 {
+    grid-column: span 2;
+    .img {
+      background-image: url("../images/img-post-6.jpg");
+    }
+  }
+  
+  // ============ 992px ============
+  @include lg {
+    .post-cntr #post-grid-cntr {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+    }
+  
+    #post-grid-cntr > * {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  
+    .post-cntr #post-grid-cntr .post-1 {
+      grid-column: span 2;
+    }
+    .post-cntr #post-grid-cntr .post-4 {
+      grid-column: span 2;
+    }
+    .post-cntr #post-grid-cntr .post-5 {
+      grid-column: span 2;
+    }
+  }
+  
+  // ============ 768px ============
+  @include md {
+    .post-sect .post-cntr #post-grid-cntr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+    }
+  
+    .post-sect .post-cntr #post-grid-cntr .post {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+  
+  // ============ 576px ============
+  @include sm {
+    .post-sect {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .post-sect .post-cntr #post-grid-cntr {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+    }
+  
+    .post-sect .post-cntr #post-grid-cntr .post {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }

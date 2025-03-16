@@ -1,0 +1,36 @@
+footer {
+    margin-top: 60px;
+    background-color: $deepBlueColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+  
+    .war {
+      font-family: $fontRoboto;
+      font-size: 16px;
+      color: $greyFontColor;
+      font-weight: 100;
+      letter-spacing: 4px;
+    }
+  
+    .wd {
+      font-family: $fontRoboto;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: 33px;
+        width: 75px;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }

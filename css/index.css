@@ -657,6 +657,7 @@ header::after {
   padding: 0px 20px 0px 20px;
   width: 100vw;
   max-width: 1300px;
+  margin-top: 99px;
 }
 .post-cntr h2 {
   color: #2d3651;

@@ -149,12 +149,14 @@
     }
   
     .foto-grid {
+      padding-left: 11px;
+      padding-right: 11px;
       grid-template-columns: repeat(1, 1fr) !important;
       grid-template-rows: repeat(9, 1fr) !important;
     }
 
     .button-contr {
-       padding: 10px;
+       padding: 20px;
         button {
         width: 100%;
       }

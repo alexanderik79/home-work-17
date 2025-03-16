@@ -1,14 +1,18 @@
+// ====================== MEDIA VARS ==================== //
+
 $xl: 2560px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
-
-
+// ====================== FONTS VARS ==================== // 
 $fontRoboto: "Roboto", sans-serif;
 $fontRobotoSlab: "Roboto Slab", serif;
 
+// ====================== COLORS VARS ==================== // 
 $hoverColor: #D66926;
+$deepBlueColor: #2d3651;
+$greyFontColor: #637588;
 
 @mixin xl {
   @media (max-width: #{$xl}) {
@@ -40,6 +44,13 @@ $hoverColor: #D66926;
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; // Убираем горизонтальный скролл
+}
+
 button:hover {
     background-color: $hoverColor;
     transition: 0.3s;
@@ -66,18 +77,6 @@ header {
     z-index: -1;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .checkbtn {
   font-size: 32px;
@@ -465,6 +464,9 @@ header {
         justify-content: center;
 
       }
+
+
+
       .post-cntr {
         padding: 99px 20px 0px 20px;
 
@@ -478,82 +480,87 @@ header {
             letter-spacing: 10;
             margin-bottom: 52px;
         }
-
-        .post-grid-cntr {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); 
-            grid-template-rows: repeat(2, 1fr); 
-            gap: 20px; 
-        }
         
-        .post {
-            background-color: #EEEEEE;
-            height: 550px; 
-            .img{
-                background-size: cover;
-                height: 300px;
-            }
-            .txt {
-                h3 {
-                    font-family: $fontRoboto;
-                    color: #637588;
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 15px;
-                }
-                p {
-                    font-family: $fontRoboto;
-                    color: #637588;
-                    font-size: 16px;
-                    text-align: center;
-                }
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 250px;
-                padding: 10px;
-            }
-        }
-        
-        .post-1 {
-            grid-column: span 2; 
-            .img {
-                background-image: url("./images/img-post-1.jpg");
-            }
-        }
 
-        .post-3 {
-            .img {
-                background-image: url("./images/img-post-3.jpg");
-            }
-        }
-        .post-4 {
-            .img {
-                background-image: url("./images/img-post-4.jpg");
-            }
-        }
-        .post-5 {
-            .img {
-                background-image: url("./images/img-post-5.jpg");
-            }
-        }
-        .post-2 {
-            .img {
-                background-image: url("./images/img-post-2.jpg");
-            }
-        }
-        .post-6 {
-            grid-column: span 2; 
-            .img {
-                background-image: url("./images/img-post-6.jpg");
-            }
-        }
       }
+
+
+      .post-cntr #post-grid-cntr {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    
+
+    
+    .post {
+        background-color: #EEEEEE;
+        height: 550px; 
+        .img{
+            background-size: cover;
+            height: 300px;
+        }
+        .txt {
+            h3 {
+                font-family: $fontRoboto;
+                color: var($greyFontColor);
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            p {
+                font-family: $fontRoboto;
+                color: var($greyFontColor);
+                font-size: 16px;
+                text-align: center;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+            padding: 10px;
+        }
+    }
+
+    .post-1 {
+      grid-column: span 2; 
+      .img {
+          background-image: url("./images/img-post-1.jpg");
+      }
+  }
+
+  .post-3 {
+      .img {
+          background-image: url("./images/img-post-3.jpg");
+      }
+  }
+  .post-4 {
+      .img {
+          background-image: url("./images/img-post-4.jpg");
+      }
+  }
+  .post-5 {
+      .img {
+          background-image: url("./images/img-post-5.jpg");
+      }
+  }
+  .post-2 {
+      .img {
+          background-image: url("./images/img-post-2.jpg");
+      }
+  }
+  .post-6 {
+      grid-column: span 2; 
+      .img {
+          background-image: url("./images/img-post-6.jpg");
+      }
+  }
 
       footer {
         margin-top: 60px;
-        background-color: rgb(45, 54, 81);
+        background-color: var($deepBlueColor);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -563,7 +570,7 @@ header {
         .war {
             font-family: $fontRoboto;
             font-size: 16px;
-            color: #637588;
+            color: var($greyFontColor);
             font-weight: 100;
             letter-spacing: 4px;
         }
@@ -581,7 +588,7 @@ header {
                 right: 33px;
                 width: 75px;
                 height: 2px;
-                background-color: #ffffff;
+                background-color: #fff;
               }
         }
       }
@@ -644,7 +651,7 @@ header {
         width: 100vw !important;
         display: flex;
         justify-content: center;
-        background-color: rgb(45, 54, 81);
+        background-color: var($deepBlueColor);
         padding: 0px 10px 10px 10px;
         justify-content: center !important;
 
@@ -656,69 +663,30 @@ header {
           }
       }
 
-// -------------------------- POSTS -------------------- //
-
-      .post-grid-cntr > * {
-        grid-row: auto !important;
-        grid-column: auto !important;
-      }
-
-      .post-cntr {
-        padding: 20px 20px 20px 20px;
-
-
-        .post {
-          background-color: #EEEEEE;
-          height: 550px; 
-          .img{
-              background-size: cover;
-              height: 300px;
-          }
-          .txt {
-              h3 {
-                  font-family: $fontRoboto;
-                  color: #637588;
-                  font-size: 18px;
-                  font-weight: bold;
-                  margin-bottom: 15px;
-              }
-              p {
-                  font-family: $fontRoboto;
-                  color: #637588;
-                  font-size: 16px;
-                  text-align: center;
-              }
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              height: 250px;
-              padding: 10px;
-          }
-      }
-      
-      .post-1 {
-        grid-column: span 2 !important; 
-      }
-      .post-4 {
-        grid-column: span 2 !important; 
-      }
-      .post-5 {
-        grid-column: span 2 !important; 
-      }
-
-      }
-
-      .post-grid-cntr {
+      .post-cntr #post-grid-cntr {
         display: grid;
-        grid-template-columns: repeat(3, 1fr) !important; 
-        grid-template-rows: repeat(3, 1fr) !important; 
-        gap: 20px; 
-      }
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 20px;
+    }
+
+    #post-grid-cntr > * {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .post-cntr #post-grid-cntr .post-1 {
+        grid-column: span 2; 
+    }
+    .post-cntr #post-grid-cntr .post-4 {
+        grid-column: span 2; 
+    }
+    .post-cntr #post-grid-cntr .post-5 {
+        grid-column: span 2; 
+    }
+
+
 }
-
-
-
 
 
 // ============================================================= 768
@@ -738,7 +706,6 @@ header {
 
   .container-h1{
       height: 40vh;
-
   }
 
   h1{
@@ -805,7 +772,7 @@ header {
   }
 
 
-// ----------------------------- INFO --------------------//
+// ----------------------------- INFO -----------------------//
   .about-block {
       padding-left: 20px;
       h2 {
@@ -825,25 +792,18 @@ header {
   }
 
 
-// -------------------------- POSTS -------------------- //
-  .post-sect {
-    display: flex;
-    justify-content: center;
-  }
+// -------------------------- POSTS ------------------------ //
+.post-sect .post-cntr #post-grid-cntr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto; 
+  gap: 20px;
+}
 
-  .post-grid-cntr > * {
-    grid-row: auto;
-    grid-column: auto;
-  }
-
-  .post-grid-cntr {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    gap: 20px; 
-  }
-
-  
+.post-sect .post-cntr #post-grid-cntr .post {
+  grid-row: auto;
+  grid-column: auto;
+}
 }
 
 
@@ -895,11 +855,9 @@ header {
 
 // ----------------------------- INFO ---------------------------- //
 
-
 .info-contr {
   display: flex;
   flex-direction: column;
-
 }
 
 .lamp-block img {
@@ -943,18 +901,18 @@ header {
   .post-sect {
     display: flex;
     justify-content: center;
-  }
+}
 
-  #post-grid-cntr > * {
-    grid-row: auto !important;
-    grid-column: auto !important;
-  }
-
-  #post-grid-cntr {
+.post-sect .post-cntr #post-grid-cntr {
     display: grid;
-    grid-template-columns: repeat(1, 1fr) !important; 
-    grid-template-rows: repeat(6, 1fr) !important; 
-    gap: 20px; 
-  }
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto; 
+    gap: 20px;
+}
+
+.post-sect .post-cntr #post-grid-cntr .post {
+    grid-row: auto;
+    grid-column: auto;
+}
 
 }
